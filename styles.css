@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap');
+* {
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img {
+  width: 10rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.box {
+  display: flex;
+  flex-flow: column;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+section {
+  width: 100%;
+}

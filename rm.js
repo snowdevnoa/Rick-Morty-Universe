@@ -5,6 +5,6 @@ class RM {
     );
     const charResponse = await response.json();
 
-    return charResponse;
+    return charResponse.results;
   }
 }

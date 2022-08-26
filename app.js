@@ -1,6 +1,7 @@
 //search input
 
 const rm = new RM();
+const ui = new UI();
 
 const searchInput = document.getElementById('search');
 
@@ -11,8 +12,9 @@ searchInput.addEventListener('keyup', (e) => {
   if (userInput !== '') {
     //search for the characters
     rm.searchCharacters(userInput)
-      .then((data) => {
-        console.log(data.results);
+      .then((characters) => {
+        console.log(characters);
+        ui.displayResults(characters);
       })
       .catch((err) => console.log(err));
   }

@@ -16,9 +16,8 @@ searchInput.addEventListener('keyup', (e) => {
       .then((characters) => {
         if (characters === undefined) {
           //show alert
-          ui.showError('Wrong show buddy ._.');
+          ui.showError('Wrong show buddy ._.', 'alert');
         } else {
-          console.log(characters);
           //show characters
           ui.displayResults(characters);
         }

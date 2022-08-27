@@ -7,8 +7,14 @@ body {
   min-height: 100vh;
 }
 
+h1 {
+  justify-content: center;
+  font-size: 4rem;
+  text-align: center;
+}
 img {
   width: 10rem;
+  border-radius: 10px;
 }
 
 .flex {
@@ -28,10 +34,35 @@ img {
   margin-top: 2rem;
 }
 
+.search {
+  flex-flow: column;
+  align-items: center;
+}
+
 section {
   width: 100%;
 }
 
 span {
   font-size: 1.3rem;
+}
+
+input {
+  width: 80%;
+
+  font-size: 2rem;
+  font-weight: 600;
+  border: solid 1px;
+  border-radius: 10px;
+}
+
+.alert {
+  color: red;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 480px) {
+  input {
+    font-size: 1.2rem;
+  }
 }

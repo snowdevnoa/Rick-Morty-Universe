@@ -11,9 +11,9 @@ class UI {
                 <img src='${character.image}'/>
                 <section class='box'>
                     <h2>${character.name}</h2>    
-                    <span>${character.location.name}</span>
-                    <span>${character.status}</span>
-                    <span>${character.species}</span>
+                    <span>Location: ${character.location.name}</span>
+                    <span>Status: ${character.status}</span>
+                    <span>Species: ${character.species}</span>
 
                 </section>
             </div>  
@@ -27,5 +27,30 @@ class UI {
     document.querySelector('.container.results').innerHTML = output;
   }
 
-  showError(msg, className) {}
+  showError(msg, className) {
+    this.clearError();
+    //create error element and add message and class
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode(msg));
+    div.className = className;
+
+    //insert into DOM
+    const parentEle = document.querySelector('.search');
+    const childNode = document.getElementById('search');
+
+    parentEle.insertBefore(div, childNode);
+
+    //Timeout after 3 sec
+    setTimeout(() => {
+      this.clearError();
+    }, 3000);
+  }
+
+  clearError() {
+    const currentAlert = document.querySelector('.alert');
+
+    if (currentAlert) {
+      currentAlert.remove();
+    }
+  }
 }

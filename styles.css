@@ -59,6 +59,7 @@ input {
 .alert {
   color: red;
   font-size: 2rem;
+  margin-bottom: 2px;
 }
 
 @media screen and (max-width: 480px) {

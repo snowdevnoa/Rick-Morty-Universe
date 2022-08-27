@@ -11,10 +11,17 @@ searchInput.addEventListener('keyup', (e) => {
 
   if (userInput !== '') {
     //search for the characters
+
     rm.searchCharacters(userInput)
       .then((characters) => {
-        console.log(characters);
-        ui.displayResults(characters);
+        if (characters === undefined) {
+          //show alert
+          ui.showError('Wrong show buddy ._.');
+        } else {
+          console.log(characters);
+          //show characters
+          ui.displayResults(characters);
+        }
       })
       .catch((err) => console.log(err));
   }
